@@ -207,6 +207,19 @@ var msg18 = {
 	}
 };
 
+var msg19 = {
+	"id": "19",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "VNXALL"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    allQty\n    allValue\n    totalQtty\n    totalValue\n    advances\n    declines\n    nochanges\n    ceiling\n    floor\n    __typename\n  }\n}\n"
+	}
+};
+
         if (connection.connected) {
 			console.log('Sending init' + JSON.stringify(msginit));
 			connection.send(JSON.stringify(msginit));
@@ -221,10 +234,10 @@ var msg18 = {
 			connection.send(JSON.stringify(msg13));
 			connection.send(JSON.stringify(msg14));
 			connection.send(JSON.stringify(msg15));
-			connection.send(JSON.stringify(msg16));					
+			connection.send(JSON.stringify(msg16));			
 			connection.send(JSON.stringify(msg17));			
 			connection.send(JSON.stringify(msg18));			
-
+			connection.send(JSON.stringify(msg19));						
         }
     }
     sendInit();
