@@ -12,3 +12,6 @@ start test.bat
 node ws-client.js
 
 4. then execute runme.bat
+
+TODO:
+help me to create more subscription msg to get more data
