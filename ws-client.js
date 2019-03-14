@@ -220,7 +220,7 @@ var msg19 = {
 	}
 };
 
-var msg810 = {{
+var msg810 = {
 	"id": "810",
 	"type": "start",
 	"payload": {
