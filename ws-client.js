@@ -103,24 +103,133 @@ var msg6 = {
 	}
 };
 
+var msg7 = {
+	"id": "7",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "HNX30"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    indexID\n    totalQtty\n    allQty\n    allValue\n    totalValue\n    advances\n    declines\n    nochanges\n    ceiling\n    floor\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg12 = {
+	"id": "12",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "HNXIndex"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexChart",
+		"query": "subscription notifyIndexChart($indexId: String!) {\n  notifyIndexChart(indexId: $indexId) {\n    indexID\n    data\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg13 = {
+	"id": "13",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "HNXIndex"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    indexID\n    totalQtty\n    allQty\n    allValue\n    totalValue\n    advances\n    declines\n    nochanges\n    ceiling\n    floor\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg14 = {
+	"id": "14",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"market": "hnx"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($market: String!) {\n  notifySession(market: $market) {\n    session\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg15 = {
+	"id": "15",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "VNINDEX"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    allQty\n    allValue\n    totalQtty\n    totalValue\n    advances\n    declines\n    nochanges\n    ceiling\n    floor\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg16 = {
+	"id": "16",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "HNXUpcomIndex"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    allQty\n    allValue\n    totalQtty\n    totalValue\n    advances\n    declines\n    nochanges\n    ceiling\n    floor\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg17 = {
+	"id": "17",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "HNXIndex"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    allQty\n    allValue\n    totalQtty\n    totalValue\n    advances\n    declines\n    nochanges\n    ceiling\n    floor\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg18 = {
+	"id": "18",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "HNX30"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    allQty\n    allValue\n    totalQtty\n    totalValue\n    advances\n    declines\n    nochanges\n    ceiling\n    floor\n    __typename\n  }\n}\n"
+	}
+};
+
         if (connection.connected) {
 			console.log('Sending init' + JSON.stringify(msginit));
 			connection.send(JSON.stringify(msginit));
-			console.log('Sending sub' + JSON.stringify(msg1));
 			connection.send(JSON.stringify(msg1));
-			console.log('Sending sub' + JSON.stringify(msg2));
 			connection.send(JSON.stringify(msg2));			
-			console.log('Sending sub' + JSON.stringify(msg3));
 			connection.send(JSON.stringify(msg3));			
-			console.log('Sending sub' + JSON.stringify(msg4));
 			connection.send(JSON.stringify(msg4));			
-			console.log('Sending sub' + JSON.stringify(msg5));
 			connection.send(JSON.stringify(msg5));			
-			console.log('Sending sub' + JSON.stringify(msg6));
-			connection.send(JSON.stringify(msg6));									
+			connection.send(JSON.stringify(msg6));	
+			connection.send(JSON.stringify(msg7));
+			connection.send(JSON.stringify(msg12));
+			connection.send(JSON.stringify(msg13));
+			connection.send(JSON.stringify(msg14));
+			connection.send(JSON.stringify(msg15));
+			connection.send(JSON.stringify(msg17));			
+			connection.send(JSON.stringify(msg18));			
+
         }
     }
     sendInit();
 });
 
 client.connect('wss://iboard.ssi.com.vn/realtime/graphql','graphql-ws');
+
+  
+
