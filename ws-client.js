@@ -220,6 +220,72 @@ var msg19 = {
 	}
 };
 
+var msg810 = {{
+	"id": "810",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"stockNo": "fu:1097"
+		},
+		"extensions": {},
+		"operationName": "stockRealtimeChanged",
+		"query": "subscription stockRealtimeChanged($stockNo: String!) {\n  stockRealtimeChanged(stockNo: $stockNo) {\n    data\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg811 = {
+	"id": "811",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"stockNo": "fu:1104"
+		},
+		"extensions": {},
+		"operationName": "stockRealtimeChanged",
+		"query": "subscription stockRealtimeChanged($stockNo: String!) {\n  stockRealtimeChanged(stockNo: $stockNo) {\n    data\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg812 = {
+	"id": "812",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"stockNo": "fu:1100"
+		},
+		"extensions": {},
+		"operationName": "stockRealtimeChanged",
+		"query": "subscription stockRealtimeChanged($stockNo: String!) {\n  stockRealtimeChanged(stockNo: $stockNo) {\n    data\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg813 = {
+	"id": "813",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"stockNo": "fu:1103"
+		},
+		"extensions": {},
+		"operationName": "stockRealtimeChanged",
+		"query": "subscription stockRealtimeChanged($stockNo: String!) {\n  stockRealtimeChanged(stockNo: $stockNo) {\n    data\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg814 = {
+	"id": "814",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "VN30"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    __typename\n  }\n}\n"
+	}
+};
+
+
         if (connection.connected) {
 			console.log('Sending init' + JSON.stringify(msginit));
 			connection.send(JSON.stringify(msginit));
@@ -238,6 +304,11 @@ var msg19 = {
 			connection.send(JSON.stringify(msg17));			
 			connection.send(JSON.stringify(msg18));			
 			connection.send(JSON.stringify(msg19));						
+			connection.send(JSON.stringify(msg810));									
+			connection.send(JSON.stringify(msg811));									
+			connection.send(JSON.stringify(msg812));									
+			connection.send(JSON.stringify(msg813));									
+			connection.send(JSON.stringify(msg814));									
         }
     }
     sendInit();
