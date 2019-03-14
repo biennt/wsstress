@@ -115,6 +115,57 @@ var msg7 = {
 		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    indexID\n    totalQtty\n    allQty\n    allValue\n    totalValue\n    advances\n    declines\n    nochanges\n    ceiling\n    floor\n    __typename\n  }\n}\n"
 	}
 };
+var msg8 = {
+	"id": "8",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"market": "hose"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($market: String!) {\n  notifySession(market: $market) {\n    session\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg9 = {
+	"id": "9",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "VN30"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexChart",
+		"query": "subscription notifyIndexChart($indexId: String!) {\n  notifyIndexChart(indexId: $indexId) {\n    indexID\n    data\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg10 = {
+	"id": "10",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"indexId": "VN30"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($indexId: String!) {\n  notifyIndexRealtime(indexId: $indexId) {\n    indexValue\n    indexID\n    totalQtty\n    allQty\n    allValue\n    totalValue\n    advances\n    declines\n    nochanges\n    ceiling\n    floor\n    __typename\n  }\n}\n"
+	}
+};
+
+var msg11 = {
+	"id": "11",
+	"type": "start",
+	"payload": {
+		"variables": {
+			"market": "hose"
+		},
+		"extensions": {},
+		"operationName": "notifyIndexRealtime",
+		"query": "subscription notifyIndexRealtime($market: String!) {\n  notifySession(market: $market) {\n    session\n    __typename\n  }\n}\n"
+	}
+};
 
 var msg12 = {
 	"id": "12",
@@ -296,6 +347,10 @@ var msg814 = {
 			connection.send(JSON.stringify(msg5));			
 			connection.send(JSON.stringify(msg6));	
 			connection.send(JSON.stringify(msg7));
+			connection.send(JSON.stringify(msg8));
+			connection.send(JSON.stringify(msg9));
+			connection.send(JSON.stringify(msg10));
+			connection.send(JSON.stringify(msg11));			
 			connection.send(JSON.stringify(msg12));
 			connection.send(JSON.stringify(msg13));
 			connection.send(JSON.stringify(msg14));
