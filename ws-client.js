@@ -221,6 +221,7 @@ var msg18 = {
 			connection.send(JSON.stringify(msg13));
 			connection.send(JSON.stringify(msg14));
 			connection.send(JSON.stringify(msg15));
+			connection.send(JSON.stringify(msg16));					
 			connection.send(JSON.stringify(msg17));			
 			connection.send(JSON.stringify(msg18));			
 
