@@ -369,7 +369,7 @@ var msg814 = {
     sendInit();
 });
 
-client.connect('wss://iboard.ssi.com.vn/realtime/graphql','graphql-ws');
+client.connect('ws://10.248.254.28:9008/graphql','graphql-ws');
 
   
 
