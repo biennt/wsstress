@@ -369,7 +369,7 @@ var msg814 = {
     sendInit();
 });
 
-client.connect('ws://10.248.254.28:9008/graphql','graphql-ws');
+client.connect('ws://realtime.kompa.vn/graphql','graphql-ws');
 
   
 
